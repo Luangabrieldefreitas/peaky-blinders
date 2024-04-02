@@ -1,0 +1,265 @@
+/* General Body Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f1f1f1;
+}
+
+/* Header Styling */
+.header {
+  background-color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Navigation Menu Styling */
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  padding: 10px 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+}
+
+.nav-link:hover {
+  color: #555;
+}
+
+/* Actors Section Styling */
+.actors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Spacing between the cards */
+  padding: 20px;
+}
+
+.actor {
+  flex-basis: calc(33.333% - 20px); /* Three items per row with gap */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Simple box shadow for style */
+  margin-bottom: 40px;
+  background-color: #fff; /* Card background */
+  border-radius: 8px; /* Rounded corners for the cards */
+  overflow: hidden; /* Ensures nothing hangs out of the card */
+}
+
+.actor img {
+  width: 100%; /* Ensures image takes up all available width */
+  height: auto; /* Ensures the image height scales proportionally */
+  display: block; /* Removes any space below the image */
+}
+
+.info {
+  padding: 15px;
+  text-align: center;
+}
+
+/* Ensuring images and cards look nice on smaller screens */
+@media (max-width: 768px) {
+  .actor {
+    flex-basis: calc(50% - 20px); /* Two items per row with gap */
+  }
+}
+
+@media (max-width: 480px) {
+  .actor {
+    flex-basis: 100%; /* One item per row on very small screens */
+  }
+}
+/* Actors Section Styling */
+.actors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Spacing between the cards */
+  padding: 20px;
+}
+
+.actor {
+  flex-basis: calc(33.333% - 20px); /* Three items per row with gap */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Simple box shadow for style */
+  margin-bottom: 40px;
+  background-color: #fff; /* Card background */
+  border-radius: 8px; /* Rounded corners for the cards */
+  overflow: hidden; /* Ensures nothing hangs out of the card */
+}
+
+/* Actor Image Container */
+.actor-img-container {
+  width: 100%; /* Full width of the container */
+  height: 0; /* Collapse the div and use padding to create aspect ratio */
+  padding-top: 125%; /* This controls the aspect ratio, e.g., 125% for 4:3 */
+  position: relative; /* Positioned relative to its normal position */
+}
+
+/* Actor Images */
+.actor-img-container img {
+  position: absolute; /* Absolute position within the container */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width of the container */
+  height: 100%; /* Full height to cover the padding area */
+  object-fit: cover; /* This will cover the area without stretching the image */
+}
+
+.info {
+  padding: 15px;
+  text-align: center;
+}
+
+/* Ensuring images and cards look nice on smaller screens */
+@media (max-width: 768px) {
+  .actor {
+    flex-basis: calc(50% - 20px); /* Two items per row with gap */
+  }
+}
+
+@media (max-width: 480px) {
+  .actor {
+    flex-basis: 100%; /* One item per row on very small screens */
+  }
+}
+.info {
+  padding: 15px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif; /* Using Montserrat for clear readability */
+  font-style: italic;
+}
+.site-footer {
+  background-color: #000; /* Cor de fundo preta */
+  color: #fff; /* Cor do texto branca */
+  text-align: center;
+  padding: 20px 10px; /* Espaçamento interno para dar espaço ao redor do texto */
+  font-size: 16px; /* Tamanho do texto */
+}/* CSS SINOPSE */
+/* Reset básico para remover margens padrão */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Garante que o body ocupe a altura total da janela do navegador */
+}
+
+/* Layout Flexbox para o <body> para estruturar o conteúdo e o rodapé */
+body {
+  display: flex;
+  flex-direction: column; /* Organiza o conteúdo em uma coluna */
+  min-height: 100vh; /* Altura mínima de 100% da altura da viewport */
+}
+
+/* Estilo para o cabeçalho */
+.header {
+  background-color: #fff; /* Fundo branco */
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Estilo para os links da navegação */
+.nav-menu .nav-link {
+  color: #000; /* Texto preto */
+  text-decoration: none;
+  padding: 0 15px;
+}
+
+/* Estilo para o conteúdo principal, permitindo que ele cresça e ocupe o espaço disponível */
+main {
+  flex: 1; /* Permite que o conteúdo principal cresça */
+  padding: 20px; /* Espaçamento interno para o conteúdo */
+}
+
+/* Estilo para o vídeo, garantindo responsividade */
+.sinopse-page .sinopse-content iframe {
+  max-width: 90%; /* Largura máxima do vídeo */
+  height: auto; /* Altura automática para manter a proporção */
+  aspect-ratio: 16 / 9; /* Mantém a proporção de 16:9 para o vídeo */
+  border-radius: 8px; /* Bordas arredondadas */
+  display: block; /* Bloco de exibição */
+  margin: 20px auto; /* Margem automática para centralização e espaço acima */
+}
+
+/* Estilo para a descrição abaixo do vídeo */
+.sinopse-page .sinopse-content p {
+  background-color: #f0f0f0; /* Fundo claro para a descrição */
+  color: #333; /* Cor do texto escuro */
+  padding: 20px; /* Espaçamento interno */
+  border-radius: 8px; /* Bordas arredondadas */
+  margin: 20px auto; /* Centraliza a descrição */
+  max-width: 80%; /* Largura máxima */
+  line-height: 1.6; /* Espaçamento da linha */
+}
+
+/* Estilo para o rodapé */
+.site-footer {
+  background-color: #000; /* Fundo preto */
+  color: #fff; /* Texto branco */
+  text-align: center;
+  padding: 20px 0;
+  width: 100%; /* Largura total */
+}
+.sinopse-page .sinopse-content p {
+  background-color: #f8f8f8; /* Um fundo claro, mas não totalmente branco */
+  color: #333; /* Cor do texto escuro para contraste */
+  padding: 25px; /* Aumenta o espaçamento interno para mais respiro */
+  border-radius: 10px; /* Bordas suavemente arredondadas */
+  margin: 40px auto; /* Aumenta a margem superior e inferior para separar visualmente do vídeo e outros conteúdos */
+  max-width: 80%; /* Largura máxima controlada */
+  line-height: 1.6; /* Espaçamento entre linhas para melhor legibilidade */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Sombra suave para dar profundidade */
+  font-family: 'Arial', sans-serif; /* Escolha uma fonte elegante se desejar */
+  letter-spacing: 0.5px; /* Espaçamento leve entre as letras */
+  text-align: justify; /* Justifica o texto para um fluxo mais uniforme */
+  font-size: 16px; /* Tamanho de fonte confortável para leitura */
+}
+.sinopse-page .sinopse-content p {
+  font-family: 'Merriweather', serif; /* Usando Merriweather para a descrição */
+  /* Restante do CSS da descrição */
+}
+/* CSS PG INICIAL */
+/* Estilos para as imagens na página inicial */
+.promo-img, .director-img {
+    max-width: 100%; /* Garante que as imagens sejam responsivas */
+    height: auto; /* Mantém a proporção das imagens */
+    border-radius: 8px; /* Bordas arredondadas para as imagens */
+    margin: 20px 0; /* Adiciona margem acima e abaixo das imagens */
+}
+
+/* Estilos para as seções na página inicial */
+.news, .curiosities, .movie-info, .director-info {
+    padding: 20px; /* Espaçamento interno para cada seção */
+    margin-bottom: 40px; /* Espaçamento entre as seções */
+    background-color: #f8f8f8; /* Fundo claro para cada seção */
+    border-radius: 8px; /* Bordas arredondadas para as seções */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Sombra suave para dar profundidade */
+}
+
+.news h2, .curiosities h2, .movie-info h2, .director-info h2 {
+    margin-top: 0; /* Remove a margem superior do título para alinhar com o topo da seção */
+}
+/* Estilos para o contêiner das imagens de divulgação */
+.promo-images {
+    display: flex; /* Utiliza Flexbox para alinhar elementos lado a lado */
+    justify-content: space-around; /* Distribui o espaço ao redor das imagens */
+    flex-wrap: wrap; /* Permite que as imagens se ajustem e quebrem a linha em telas menores */
+    margin-bottom: 20px; /* Espaçamento abaixo do contêiner para separar do texto abaixo */
+}
+
+/* Estilos para as imagens de divulgação */
+.promo-img {
+    max-width: 45%; /* Define uma largura máxima para cada imagem para garantir que fiquem lado a lado */
+    height: auto; /* Mantém a proporção das imagens */
+    border-radius: 8px; /* Bordas arredondadas para as imagens */
+    margin: 10px; /* Adiciona uma pequena margem ao redor das imagens para separação */
+}
+
+
+
